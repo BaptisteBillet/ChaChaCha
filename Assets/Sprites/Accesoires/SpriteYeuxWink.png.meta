@@ -1,0 +1,249 @@
+fileFormatVersion: 2
+guid: e3d4ee6b1806f444c9b9ed12dddce338
+timeCreated: 1450002785
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: SpriteYeuxWink_0
+    21300002: SpriteYeuxWink_1
+    21300004: SpriteYeuxWink_2
+    21300006: SpriteYeuxWink_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 512
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: SpriteYeuxWink_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 110
+        width: 237
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 76.5, y: 11}
+        - {x: 20.5, y: 1}
+        - {x: 18.5, y: -2}
+        - {x: 18.5, y: -29}
+        - {x: 24.5, y: -55}
+        - {x: 117.5, y: -55}
+        - {x: 118.5, y: -48}
+        - {x: 118.5, y: 11}
+      - - {x: -45.5, y: 7}
+        - {x: -58.5, y: 16}
+        - {x: -11.5, y: 5}
+        - {x: -1.5, y: 11}
+        - {x: -1.5, y: 35}
+        - {x: -64.5, y: 55}
+        - {x: -88.5, y: 55}
+        - {x: -90.5, y: 54}
+        - {x: -118.5, y: 42}
+        - {x: -118.5, y: -54}
+        - {x: -49.5, y: -54}
+        - {x: -29.5, y: -19}
+        - {x: -21.5, y: 5}
+        - {x: -31.5, y: 9}
+      - - {x: 100.5, y: 53}
+        - {x: 95.5, y: 54}
+        - {x: 51.5, y: 54}
+        - {x: 7.5, y: 29}
+        - {x: 7.5, y: 5}
+        - {x: 67.5, y: 5}
+        - {x: 105.5, y: 14}
+        - {x: 114.5, y: 16}
+        - {x: 116.5, y: 20}
+        - {x: 116.5, y: 31}
+    - name: SpriteYeuxWink_1
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 110
+        width: 237
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18.5, y: -17}
+        - {x: 24.5, y: -36}
+        - {x: 47.5, y: -55}
+        - {x: 118.5, y: -55}
+        - {x: 118.5, y: 12}
+        - {x: 22.5, y: 12}
+        - {x: 18.5, y: 0}
+      - - {x: -43.5, y: 9}
+        - {x: -40.5, y: 10}
+        - {x: -8.5, y: 7}
+        - {x: -1.5, y: 11}
+        - {x: -1.5, y: 37}
+        - {x: -62.5, y: 55}
+        - {x: -99.5, y: 55}
+        - {x: -116.5, y: 48}
+        - {x: -118.5, y: 39}
+        - {x: -118.5, y: -52}
+        - {x: -102.5, y: -54}
+        - {x: -52.5, y: -54}
+        - {x: -24.5, y: -8}
+        - {x: -23.5, y: 4}
+        - {x: -31.5, y: 9}
+      - - {x: 68.5, y: 54}
+        - {x: 57.5, y: 50}
+        - {x: 5.5, y: 26}
+        - {x: 5.5, y: 5}
+        - {x: 72.5, y: 5}
+        - {x: 116.5, y: 12}
+        - {x: 116.5, y: 31}
+        - {x: 85.5, y: 54}
+      - - {x: -89.5, y: 18}
+        - {x: -89.5, y: 17}
+        - {x: -87.5, y: 15}
+        - {x: -81.5, y: 17}
+        - {x: -78.5, y: 20}
+        - {x: -79.5, y: 23}
+        - {x: -84.5, y: 23}
+    - name: SpriteYeuxWink_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 237
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 76.5, y: 11}
+        - {x: 20.5, y: 1}
+        - {x: 18.5, y: -2}
+        - {x: 18.5, y: -29}
+        - {x: 24.5, y: -55}
+        - {x: 117.5, y: -55}
+        - {x: 118.5, y: -48}
+        - {x: 118.5, y: 11}
+      - - {x: -45.5, y: 7}
+        - {x: -58.5, y: 16}
+        - {x: -11.5, y: 5}
+        - {x: -1.5, y: 11}
+        - {x: -1.5, y: 35}
+        - {x: -64.5, y: 55}
+        - {x: -88.5, y: 55}
+        - {x: -90.5, y: 54}
+        - {x: -118.5, y: 42}
+        - {x: -118.5, y: -54}
+        - {x: -49.5, y: -54}
+        - {x: -29.5, y: -19}
+        - {x: -21.5, y: 5}
+        - {x: -31.5, y: 9}
+      - - {x: 100.5, y: 53}
+        - {x: 95.5, y: 54}
+        - {x: 51.5, y: 54}
+        - {x: 7.5, y: 29}
+        - {x: 7.5, y: 5}
+        - {x: 67.5, y: 5}
+        - {x: 105.5, y: 14}
+        - {x: 114.5, y: 16}
+        - {x: 116.5, y: 20}
+        - {x: 116.5, y: 31}
+    - name: SpriteYeuxWink_3
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 0
+        width: 237
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 28.5, y: 12}
+        - {x: 18.5, y: 10}
+        - {x: 18.5, y: -33}
+        - {x: 19.5, y: -40}
+        - {x: 54.5, y: -55}
+        - {x: 88.5, y: -55}
+        - {x: 97.5, y: -51}
+        - {x: 118.5, y: -46}
+        - {x: 118.5, y: 12}
+      - - {x: -45.5, y: 9}
+        - {x: -68.5, y: 20}
+        - {x: -73.5, y: 19}
+        - {x: -78.5, y: 16}
+        - {x: -79.5, y: 12}
+        - {x: -79.5, y: 14}
+        - {x: -77.5, y: 17}
+        - {x: -75.5, y: 22}
+        - {x: -85.5, y: 25}
+        - {x: -89.5, y: 18}
+        - {x: -93.5, y: 25}
+        - {x: -76.5, y: 31}
+        - {x: -58.5, y: 16}
+        - {x: -11.5, y: 5}
+        - {x: -2.5, y: 12}
+        - {x: -1.5, y: 16}
+        - {x: -1.5, y: 37}
+        - {x: -59.5, y: 55}
+        - {x: -91.5, y: 55}
+        - {x: -118.5, y: 41}
+        - {x: -118.5, y: -46}
+        - {x: -104.5, y: -50}
+        - {x: -88.5, y: -54}
+        - {x: -48.5, y: -54}
+        - {x: -30.5, y: -19}
+        - {x: -22.5, y: 0}
+        - {x: -26.5, y: 7}
+      - - {x: 49.5, y: 54}
+        - {x: 5.5, y: 24}
+        - {x: 5.5, y: 5}
+        - {x: 73.5, y: 5}
+        - {x: 116.5, y: 13}
+        - {x: 116.5, y: 31}
+        - {x: 98.5, y: 54}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

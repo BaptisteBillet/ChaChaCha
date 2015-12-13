@@ -32,6 +32,9 @@ public partial class GameManager : MonoBehaviour {
     public int m_LeftFinger = -1;
     public int m_RightFinger = -1;
 
+    public int m_LeftFingerLast = -2;
+    public int m_RightFingerLast = -2;
+
     private int m_LeftFingerMemory = -2;
     private int m_RightFingerMemory = -2;
 
@@ -48,8 +51,6 @@ public partial class GameManager : MonoBehaviour {
     private Dictionary<KeyCode, int> KeyNumeric = new Dictionary<KeyCode, int>();
 
     public Animator m_Tuto;
-
-    bool m_isMusicLaunch=false;
 
     void Awake()
     {
@@ -87,10 +88,297 @@ public partial class GameManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        m_ScoreText.text = "0";
         TUTO.SetActive(true);
         PanelTuto.SetActive(true);
         PanelChoiceOfKeyboard.SetActive(false);
         KeyBoardChoice[m_KeyboardChoiceMin].Select();
+
+
+        ///////////
+        #region Choree1
+        m_Choree1.m_Choree = new List<Enchainement>();
+
+        Enchainement m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.Idle;
+        m_Enchainement.m_Repetition = 2;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.TapLeft;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.Idle;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.TapRight;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.Idle;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.TapLeft;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.Idle;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.TapRight;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.Idle;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        //25
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.TapLeft;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.TapLeft;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.TapRight;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.TapRight;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.TapLeft;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.TapLeft;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.TapRight;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.TapRight;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        //41
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.Idle;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.Idle;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.Idle;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.Idle;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+        //48
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.TapLeft;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.TapLeft;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.TapRight;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.TapLeft;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.TapRight;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.TapRight;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.TapLeft;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.TapRight;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+        //65
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.Idle;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.StepLeft;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+        //69
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.Idle;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.Idle;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.TapFront;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement.m_Mouvement = MouvementName.Idle;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.TapFront;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement.m_Mouvement = MouvementName.Idle;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.TapLeft;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement.m_Mouvement = MouvementName.TapFront;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.TapLeft;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+        //89
+
+        m_Enchainement.m_Mouvement = MouvementName.Idle;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement.m_Mouvement = MouvementName.Idle;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement.m_Mouvement = MouvementName.Idle;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement.m_Mouvement = MouvementName.Idle;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        //97
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.TapLeft;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.TapLeft;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.TapRight;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.TapLeft;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+        //105
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.TapRight;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.TapRight;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.TapLeft;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.TapRight;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+        //113
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.Idle;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.Idle;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.StepRight;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.Idle;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
+
+
+
+
+
+
+
+        #endregion
     }
 
 
@@ -519,7 +807,8 @@ public partial class GameManager : MonoBehaviour {
                 PanelChoiceOfKeyboard.SetActive(false);
                 GameState = GameStates.GAME;
                 TUTO.SetActive(false);
-                Invoke("LauchMusic", 3);
+                LaunchMusic();
+
             }
 
         }
@@ -672,6 +961,7 @@ public partial class GameManager : MonoBehaviour {
         m_LeftFingerMemory = m_LeftFinger;
         m_RightFingerMemory = m_RightFinger;
 
+       
 
         if (_isPush)
         {
@@ -714,6 +1004,8 @@ public partial class GameManager : MonoBehaviour {
         {
             m_RightHasChanged = false;
         }
+
+        
 
 
     }
