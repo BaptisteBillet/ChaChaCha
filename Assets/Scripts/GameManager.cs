@@ -52,6 +52,10 @@ public partial class GameManager : MonoBehaviour {
 
     public Animator m_Tuto;
 
+    public Animator m_Bouche;
+
+    public GameObject m_Coeur;
+
     void Awake()
     {
         KeyNumeric.Add(KeyCode.A, 0);
@@ -91,9 +95,6 @@ public partial class GameManager : MonoBehaviour {
         m_ScoreText.text = "0";
         TUTO.SetActive(true);
         PanelTuto.SetActive(true);
-        PanelChoiceOfKeyboard.SetActive(false);
-        KeyBoardChoice[m_KeyboardChoiceMin].Select();
-
 
         ///////////
         #region Choree1
@@ -372,7 +373,10 @@ public partial class GameManager : MonoBehaviour {
         m_Enchainement.m_Repetition = 0;
         m_Choree1.m_Choree.Add(m_Enchainement);
 
-
+        m_Enchainement = new Enchainement();
+        m_Enchainement.m_Mouvement = MouvementName.End;
+        m_Enchainement.m_Repetition = 0;
+        m_Choree1.m_Choree.Add(m_Enchainement);
 
 
 
@@ -732,16 +736,18 @@ public partial class GameManager : MonoBehaviour {
                 {
                     m_Tuto.SetTrigger("Close");
                     PanelTuto.SetActive(false);
-                    PanelChoiceOfKeyboard.SetActive(true);
-                    GameState = GameStates.KEYBOARD;
-                    KeyBoardChoice[0].Select();
+
+
+                    GameState = GameStates.GAME;
+                    TUTO.SetActive(false);
+                    LaunchMusic();
                 }
 
             }
 
         }
         #endregion
-
+        /*
         #region SETKEYBOARD
         if(GameState==GameStates.KEYBOARD)
         {
@@ -813,7 +819,7 @@ public partial class GameManager : MonoBehaviour {
 
         }
         #endregion
-
+    */
 
 
     }
@@ -1010,6 +1016,9 @@ public partial class GameManager : MonoBehaviour {
 
     }
 
-
+    void ActivateCoeur(bool _isActivate)
+    {
+        m_Coeur.SetActive(_isActivate);
+    }
 
 }

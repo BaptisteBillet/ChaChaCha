@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Tempo : MonoBehaviour {
 
@@ -43,6 +44,7 @@ public class Tempo : MonoBehaviour {
                 case MouvementName.TapRight:
                     m_Indication.sprite = m_TapRight;
                     break;
+
                     /*
                 case MouvementName.Idle:
                     m_Indication.sprite = m_Idle;
@@ -60,7 +62,7 @@ public class Tempo : MonoBehaviour {
 
         transform.Translate(Vector3.left * m_Speed * Time.deltaTime);
 	}
-
+  
     void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag=="Animation")
@@ -68,10 +70,6 @@ public class Tempo : MonoBehaviour {
             if (m_GameManager != null)
             {
                 m_GameManager.BlockAnimationContact(m_Mouvement);
-            }
-            else
-            {
-
             }
 
         }
@@ -81,10 +79,16 @@ public class Tempo : MonoBehaviour {
             {
                 m_GameManager.BlockContact(m_Mouvement);
             }
-            else
-            {
 
+            Debug.Log(m_Mouvement);
+
+            if(m_Mouvement==MouvementName.End)
+            {
+                PlayerPrefs.SetInt("Score", m_GameManager.m_Score);
+                SceneManager.LoadScene("End");
             }
+
+
             Destroy(this.gameObject);
         }
 

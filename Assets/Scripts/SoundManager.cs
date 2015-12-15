@@ -39,8 +39,21 @@ public class SoundManager : MonoBehaviour {
 				Source[0].clip = Music[0];
 				Source[0].Play();
 				break;
-			
-		}
+
+            case SoundManagerType.VOICE:
+                Source[1].Stop();
+                int a = Random.Range(0, 11);
+                Source[1].clip = Voice[a];
+                Source[1].Play();
+                break;
+
+            case SoundManagerType.APPLAUDISSEMENT:
+                Source[2].Stop();
+                Source[2].clip = Sound[0];
+                Source[2].Play();
+                break;
+
+        }
 	}
 
 	

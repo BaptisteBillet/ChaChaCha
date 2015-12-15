@@ -29,7 +29,8 @@ using System.Collections;
 public enum SoundManagerType
 {
 	LAUNCHMUSIC,
-
+    APPLAUDISSEMENT,
+    VOICE
 }
 
 public class SoundManagerEvent : MonoBehaviour

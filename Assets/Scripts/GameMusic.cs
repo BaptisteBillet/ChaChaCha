@@ -63,7 +63,8 @@ public partial class GameManager : MonoBehaviour {
     public int m_LeftFingerGoodPosition = 14;
     public int m_RightFingerGoodPosition = 15;
 
-    int m_Score = 0;
+    [HideInInspector]
+    public int m_Score = 0;
 
     float m_Battement=0.5f;
 
@@ -80,6 +81,8 @@ public partial class GameManager : MonoBehaviour {
     public Animator m_AnimatorMain;
 
     public Text m_ScoreText;
+
+    public Animator m_ScoreBumping;
 
     /// <summary>
     
@@ -148,7 +151,7 @@ public partial class GameManager : MonoBehaviour {
                 //Si c'est la fin
                 if (m_Choree1.m_Choree[m_ChoreeCompteur].m_Mouvement == MouvementName.End)
                 {
-
+                    m_TempoCanon.Send(m_Choree1.m_Choree[m_ChoreeCompteur].m_Mouvement);
                 }
                 else //Sinon
                 {
@@ -332,6 +335,22 @@ public partial class GameManager : MonoBehaviour {
             {
                 ChangeScore();
                 Debug.Log("GOOD");
+
+                int _value = Random.Range(0, 8);
+
+                if(_value==0)
+                {
+                    SoundManagerEvent.emit(SoundManagerType.VOICE);
+                }
+
+                m_ScoreBumping.SetTrigger("Bump");
+
+
+            }
+            else
+            {
+                ActivateCoeur(false);
+                m_Bouche.SetTrigger("Bad");
             }
         }
 
@@ -432,6 +451,9 @@ public partial class GameManager : MonoBehaviour {
     {
         m_Score++;
         m_ScoreText.text = m_Score.ToString();
+
+        ActivateCoeur(true);
+
     }
    
 
